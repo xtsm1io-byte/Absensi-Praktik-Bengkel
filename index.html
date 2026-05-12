@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi Praktik Bengkel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2 style="color: #1a73e8; text-align: center;">Presensi Praktik</h2>
+        
+        <form id="absensiForm">
+            <input type="text" id="nama" placeholder="Nama Lengkap Siswa" required>
+            <input type="date" id="tanggal" required>
+            <select id="status" required>
+                <option value="Hadir">Hadir</option>
+                <option value="Izin">Izin</option>
+                <option value="Sakit">Sakit</option>
+            </select>
+            <button type="submit" id="btnKirim">Kirim Presensi</button>
+        </form>
+        
+        <p id="pesan"></p>
+
+        <div id="rekapanContainer" style="display:none;">
+            <hr>
+            <h3 style="font-size: 1rem; color: #333;">10 Presensi Terakhir</h3>
+            <table id="tabelRekapan">
+                <thead>
+                    <tr>
+                        <th>Tgl</th>
+                        <th>Nama</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="isiTabel"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
